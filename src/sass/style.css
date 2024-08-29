@@ -167,9 +167,9 @@ main {
 }
 
 .events .container {
-  height: 391px;
-  width: 100%;
-  overflow: hidden;
+  width: 1360px;
+  margin: 0 auto;
+  position: relative;
 }
 .events .container .title {
   display: flex;
@@ -183,59 +183,79 @@ main {
   font-weight: 600;
   color: rgb(17, 17, 17);
 }
-.events .container .swiper {
-  position: relative;
-}
-.events .container .swiper .swiper-wrapper {
+.events .container .swiper-wrapper {
   display: flex;
+  width: 1260px;
+  margin: 0 auto;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide {
+.events .container .swiper-wrapper .swiper-slide {
   width: 25%;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .img {
+.events .container .swiper-wrapper .swiper-slide .img {
   width: 295px;
   height: 219.77px;
   position: relative;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .img img {
+.events .container .swiper-wrapper .swiper-slide .img img {
   border-radius: 8px 8px 0px 0px;
   width: 100%;
   height: 100%;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .img svg {
+.events .container .swiper-wrapper .swiper-slide .img svg {
   position: absolute;
   width: 44px;
   height: 44px;
   left: 239px;
   padding: 10px 0px 0px 0px;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .content {
+.events .container .swiper-wrapper .swiper-slide .content {
   width: 295px;
   height: 140px;
   padding: 0px 8px 8px 12px;
   gap: 4px;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .content h4 {
+.events .container .swiper-wrapper .swiper-slide .content h4 {
   font-family: Poppins;
   font-size: 24px;
   font-weight: 600;
   line-height: 36px;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .content .properties {
+.events .container .swiper-wrapper .swiper-slide .content .properties {
   display: flex;
   gap: 5px;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .content .properties svg {
+.events .container .swiper-wrapper .swiper-slide .content .properties svg {
   width: 24px;
   height: 24px;
   padding: 3px 0px 0px 0px;
 }
-.events .container .swiper .swiper-wrapper .swiper-slide .content .properties p {
+.events .container .swiper-wrapper .swiper-slide .content .properties p {
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: rgb(105, 105, 105);
+}
+.events .container .swiper-button-prev,
+.events .container .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  border: 2px solid red;
+}
+.events .container .swiper-button-prev {
+  left: -100px;
+}
+.events .container .swiper-button-next {
+  right: -100px;
 }
 
 .upcoming {

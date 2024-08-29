@@ -68,15 +68,15 @@ main {
 
 .events {
     .container {
-        height: 391px;
-        width: 100%;
-        overflow: hidden;
-
+        width: 1360px;
+        margin: 0 auto;
+        position: relative;
+    
         .title {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
-
+    
             h3,
             h4 {
                 font-family: Poppins;
@@ -85,76 +85,100 @@ main {
                 color: rgba(17, 17, 17, 1);
             }
         }
-
-        .swiper {
-            position: relative;
-            .swiper-wrapper {
-                display: flex;
     
-                .swiper-slide {
-                    width: 25%;
+        .swiper-wrapper {
+            display: flex;
+            width: 1260px;
+            margin: 0 auto;
     
-                    .img {
-                        width: 295px;
-                        height: 219.77px;
-                        position: relative;
+            .swiper-slide {
+                width: 25%;
     
-                        img {
-                            border-radius: 8px 8px 0px 0px;
-                            width: 100%;
-                            height: 100%;
-                        }
+                .img {
+                    width: 295px;
+                    height: 219.77px;
+                    position: relative;
     
-                        svg {
-                            position: absolute;
-                            width: 44px;
-                            height: 44px;
-                            left: 239px;
-                            padding: 10px 0px 0px 0px;
-                        }
+                    img {
+                        border-radius: 8px 8px 0px 0px;
+                        width: 100%;
+                        height: 100%;
                     }
     
-                    .content {
-                        width: 295px;
-                        height: 140px;
-                        padding: 0px 8px 8px 12px;
-                        gap: 4px;
+                    svg {
+                        position: absolute;
+                        width: 44px;
+                        height: 44px;
+                        left: 239px;
+                        padding: 10px 0px 0px 0px;
+                    }
+                }
     
-                        h4 {
-                            font-family: Poppins;
-                            font-size: 24px;
-                            font-weight: 600;
-                            line-height: 36px;
+                .content {
+                    width: 295px;
+                    height: 140px;
+                    padding: 0px 8px 8px 12px;
+                    gap: 4px;
+    
+                    h4 {
+                        font-family: Poppins;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 36px;
+                    }
+    
+                    .properties {
+                        display: flex;
+                        gap: 5px;
+    
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            padding: 3px 0px 0px 0px;
                         }
     
-                        .properties {
-                            display: flex;
-                            gap: 5px;
-    
-                            svg {
-                                width: 24px;
-                                height: 24px;
-                                padding: 3px 0px 0px 0px;
-                            }
-    
-                            p {
-                                font-family: Poppins;
-                                font-size: 16px;
-                                font-weight: 400;
-                                line-height: 24px;
-                                color: rgba(105, 105, 105, 1);
-                            }
+                        p {
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: rgba(105, 105, 105, 1);
                         }
                     }
                 }
             }
         }
-        
+    
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000; 
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            visibility: visible;
+            opacity: 1; 
+            border: 2px solid red; 
+        }
+    
+        .swiper-button-prev {
+            left: -100px; 
+        }
+    
+        .swiper-button-next {
+            right: -100px; 
+        }
     }
+         
 }
 
 .upcoming {
     margin-top: 49px;
+
     .container {
         .title {
             display: flex;
@@ -169,6 +193,7 @@ main {
                 color: rgba(17, 17, 17, 1);
             }
         }
+
         .swiper-wrapper {
             display: flex;
 
