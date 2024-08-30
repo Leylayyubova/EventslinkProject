@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(255, 245, 246);
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;
@@ -55,7 +59,13 @@ ul {
   font-weight: 400;
   line-height: 30px;
 }
+.eventslink .container .right {
+  display: flex;
+}
 .eventslink .container .right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(255, 245, 246);
   font-family: Poppins;
   font-size: 20px;
@@ -63,22 +73,29 @@ ul {
   line-height: 30px;
   margin-right: 81px;
 }
+.eventslink .container .right a object {
+  margin-left: 5px;
+}
+.eventslink .container .right object {
+  margin-left: 24px;
+}
 
 footer {
   background: rgb(17, 17, 17);
   margin-top: 153px;
 }
 footer .container {
+  max-width: 1220px;
   padding-top: 30px;
 }
 footer .container .menu {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  text-align: right;
+  color: #FFF5F6;
 }
 footer .container .menu li a {
-  color: rgb(255, 245, 246);
+  color: rgb(171, 167, 167);
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
@@ -87,45 +104,48 @@ footer .container .menu li a {
 footer .container .contact {
   display: flex;
   justify-content: space-between;
+  margin-top: 59px;
+  padding-bottom: 30px;
 }
 footer .container .contact p {
-  color: rgb(255, 245, 246);
-  font-family: Jua;
   font-size: 24px;
   font-weight: 400;
+  font-family: Jua;
+  color: rgb(255, 245, 246);
   line-height: 30px;
+  text-transform: uppercase;
 }
 footer .container .contact .mail {
   display: flex;
   align-items: center;
-  font-family: Inter;
   font-size: 16px;
+  font-family: Inter;
   font-weight: 500;
   line-height: 24px;
+  text-transform: lowercase;
 }
-footer .container .contact .mail svg {
+footer .container .contact .mail object {
   width: 24px;
   height: 24px;
   margin-right: 8px;
 }
 
-main {
-  background: rgb(255, 245, 246);
+.enjoy {
+  top: 80px;
 }
-
 .enjoy .background {
   background-image: url(https://s3-alpha-sig.figma.com/img/308e/e9a6/909ef2b0c724492151e712d65e7e6d94?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MACHveKPUvD-UfKTrHuT92cywleE5M46CNYaK4acmQ84i27EJx2rbyxYyKKdZKeGKeeMB9MJFkDrUl-rjfcERBuWNCQptWy-0XkkV0kmFeqpNg5M-cEtlPST6Ei26zG4TqRCvvWcolzVPtPa6PRAdNoyooo7td-FQMVKSCPUzMenWNp~5FC7QDBvh2f6HyE4BMUjT0EcFTeoZbaco5YvgXb1xtvmcdR~MJ~qgupFCPcmeWzLVpbTjE8ziYyyCZNRsZFgsvLSRhFpRy~Puk-DzVM6Rr0q56PxrJZGECFDpCyli6dZQyOMc-gqBztPueSQSTM7ek3X9mjYUNZY207B8Q__);
-  filter: grayscale(100%);
   background-size: cover;
+  background-position: 0px -345px;
+  filter: grayscale(100%);
   width: 100%;
   height: 691px;
-  background-position: 80px;
 }
 .enjoy .container {
   position: absolute;
   width: 727px;
   height: 200px !important;
-  top: 409px;
+  top: 65%;
   left: 100px;
   z-index: 1;
 }
@@ -134,29 +154,28 @@ main {
   font-size: 44px;
   font-weight: 600;
   line-height: 66px;
-  text-align: left;
   color: rgb(255, 255, 255);
+  text-transform: uppercase;
 }
 .enjoy .container p {
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   line-height: 24.38px;
-  text-align: left;
   color: rgb(255, 245, 246);
 }
 .enjoy .container button {
-  padding: 16px 32px 16px 32px;
-  border-radius: 8px;
-  background: rgb(248, 71, 87);
-  box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
-  color: rgb(255, 255, 255);
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
+  background: rgb(248, 71, 87);
+  color: rgb(255, 255, 255);
   margin-top: 40px;
+  padding: 16px 32px 16px 32px;
+  border-radius: 8px;
   border: none;
+  box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
 }
 
 .activity .container {
@@ -165,7 +184,75 @@ main {
   margin-top: 58px;
   margin-bottom: 120px;
 }
+.activity .container .info .circle {
+  width: 190px;
+  height: 190px;
+  padding: 7px 0 0 0;
+  gap: 10px;
+  border-radius: 111px 0 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity .container .info .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.activity .container .info p {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 8px;
+  text-align: center;
+}
+.activity .container .info object {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.events {
+  position: relative;
+}
+.events .next-button {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.events .next-button button {
+  width: 44px;
+  height: 44px;
+  top: 159px;
+  left: 1324px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 100px;
+  border: 9px;
+}
+.events .prev-button {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: scaleX(-1);
+}
+.events .prev-button button {
+  width: 44px;
+  height: 44px;
+  top: 159px;
+  left: 1324px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 100px;
+  border: 9px;
+}
 .events .container {
   width: 1360px;
   margin: 0 auto;
@@ -176,12 +263,17 @@ main {
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.events .container .title h3,
-.events .container .title h4 {
+.events .container .title h3 {
   font-family: Poppins;
   font-size: 28px;
   font-weight: 600;
   color: rgb(17, 17, 17);
+}
+.events .container .title h4 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
 }
 .events .container .swiper-wrapper {
   display: flex;
@@ -201,7 +293,7 @@ main {
   width: 100%;
   height: 100%;
 }
-.events .container .swiper-wrapper .swiper-slide .img svg {
+.events .container .swiper-wrapper .swiper-slide .img object {
   position: absolute;
   width: 44px;
   height: 44px;
@@ -224,9 +316,8 @@ main {
   display: flex;
   gap: 5px;
 }
-.events .container .swiper-wrapper .swiper-slide .content .properties svg {
-  width: 24px;
-  height: 24px;
+.events .container .swiper-wrapper .swiper-slide .content .properties object {
+  display: block;
   padding: 3px 0px 0px 0px;
 }
 .events .container .swiper-wrapper .swiper-slide .content .properties p {
@@ -260,36 +351,75 @@ main {
 
 .upcoming {
   margin-top: 49px;
+  padding-bottom: 163px;
+  position: relative;
+}
+.upcoming .next-button {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.upcoming .next-button button {
+  width: 44px;
+  height: 44px;
+  top: 159px;
+  left: 1324px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 100px;
+  border: 9px;
+}
+.upcoming .prev-button {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: scaleX(-1);
+}
+.upcoming .prev-button button {
+  width: 44px;
+  height: 44px;
+  top: 159px;
+  left: 1324px;
+  padding: 10px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 100px;
+  border: 9px;
 }
 .upcoming .container .title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.upcoming .container .title h3,
-.upcoming .container .title h4 {
+.upcoming .container .title h3 {
   font-family: Poppins;
   font-size: 28px;
   font-weight: 600;
   color: rgb(17, 17, 17);
 }
+.upcoming .container .title h4 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
 .upcoming .container .swiper-wrapper {
   display: flex;
+  height: 391px;
 }
 .upcoming .container .swiper-wrapper .swiper-slide {
   width: 25%;
 }
 .upcoming .container .swiper-wrapper .swiper-slide .img {
+  position: relative;
   width: 295px;
   height: 219.77px;
-  position: relative;
 }
 .upcoming .container .swiper-wrapper .swiper-slide .img img {
   border-radius: 8px 8px 0px 0px;
   width: 100%;
   height: 100%;
 }
-.upcoming .container .swiper-wrapper .swiper-slide .img svg {
+.upcoming .container .swiper-wrapper .swiper-slide .img .heart {
   position: absolute;
   width: 44px;
   height: 44px;
@@ -333,8 +463,26 @@ main {
 }
 .destinations .container .country {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   margin-top: 28px;
+}
+.destinations .container .country .circle {
+  overflow: hidden;
+}
+.destinations .container .country .circle img {
+  border-radius: 50%;
+  height: 295px;
+  width: 295px;
+}
+.destinations .container .country .circle p {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 12px;
 }
 
 .join {
@@ -342,13 +490,16 @@ main {
 }
 .join .container {
   display: flex;
-  justify-content: space-between;
-  background: rgb(253, 209, 213);
+  align-items: center;
+  max-width: 1220px;
   border-radius: 20px;
   padding: 60px;
+  gap: 191px;
+  background: rgb(253, 209, 213);
 }
 .join .container .content {
   width: 606px;
+  height: 190px;
 }
 .join .container .content h4 {
   font-family: Poppins;
@@ -361,15 +512,19 @@ main {
   font-size: 20px;
   font-weight: 400;
   line-height: 24.38px;
+  color: rgb(17, 17, 17);
 }
 .join .container .content button {
   width: 140px;
   height: 46px;
   padding: 16px 32px 16px 32px;
-  gap: 3px;
   border-radius: 8px;
-  background: rgb(248, 71, 87);
   border: none;
-  color: #fff;
   margin-top: 24px;
+  background: rgb(248, 71, 87);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 13px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,23 +1,19 @@
-main {
-    background: rgba(255, 245, 246, 1);
-}
-
 .enjoy {
+    top: 80px;
     .background {
         background-image: url(https://s3-alpha-sig.figma.com/img/308e/e9a6/909ef2b0c724492151e712d65e7e6d94?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MACHveKPUvD-UfKTrHuT92cywleE5M46CNYaK4acmQ84i27EJx2rbyxYyKKdZKeGKeeMB9MJFkDrUl-rjfcERBuWNCQptWy-0XkkV0kmFeqpNg5M-cEtlPST6Ei26zG4TqRCvvWcolzVPtPa6PRAdNoyooo7td-FQMVKSCPUzMenWNp~5FC7QDBvh2f6HyE4BMUjT0EcFTeoZbaco5YvgXb1xtvmcdR~MJ~qgupFCPcmeWzLVpbTjE8ziYyyCZNRsZFgsvLSRhFpRy~Puk-DzVM6Rr0q56PxrJZGECFDpCyli6dZQyOMc-gqBztPueSQSTM7ek3X9mjYUNZY207B8Q__);
-        filter: grayscale(100%);
         background-size: cover;
+        background-position: 0px -345px;
+        filter: grayscale(100%);
         width: 100%;
         height: 691px;
-        background-position: 80px;
-
     }
 
     .container {
         position: absolute;
         width: 727px;
         height: 200px !important;
-        top: 409px;
+        top: 65%;
         left: 100px;
         z-index: 1;
 
@@ -26,8 +22,8 @@ main {
             font-size: 44px;
             font-weight: 600;
             line-height: 66px;
-            text-align: left;
             color: rgba(255, 255, 255, 1);
+            text-transform: uppercase;
         }
 
         p {
@@ -35,24 +31,21 @@ main {
             font-size: 20px;
             font-weight: 500;
             line-height: 24.38px;
-            text-align: left;
             color: rgba(255, 245, 246, 1);
         }
 
         button {
-            // width: 179px;
-            // height: 46px;
-            padding: 16px 32px 16px 32px;
-            border-radius: 8px;
-            background: rgba(248, 71, 87, 1);
-            box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
-            color: rgba(255, 255, 255, 1);
             font-family: Poppins;
             font-size: 20px;
             font-weight: 500;
             line-height: 20px;
+            background: rgba(248, 71, 87, 1);
+            color: rgba(255, 255, 255, 1);
             margin-top: 40px;
+            padding: 16px 32px 16px 32px;
+            border-radius: 8px;
             border: none;
+            box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
         }
     }
 }
@@ -63,49 +56,133 @@ main {
         justify-content: space-between;
         margin-top: 58px;
         margin-bottom: 120px;
+
+        .info {
+            .circle {
+                width: 190px;
+                height: 190px;
+                padding: 7px 0 0 0;
+                gap: 10px;
+                border-radius: 111px 0 0 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 190px;
+                    height: 190px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                }
+
+            }
+
+            p {
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 36px;
+                margin-top: 8px;
+                text-align: center;
+            }
+
+            object {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 }
 
 .events {
+    position: relative;
+
+    .next-button {
+        position: absolute;
+        top: 40%;
+        right: 0;
+
+        button {
+            width: 44px;
+            height: 44px;
+            top: 159px;
+            left: 1324px;
+            padding: 10px 0px 0px 0px;
+            gap: 10px;
+            border-radius: 100px;
+            border: 9px;
+        }
+    }
+
+    .prev-button {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        transform: scaleX(-1);
+
+        button {
+            width: 44px;
+            height: 44px;
+            top: 159px;
+            left: 1324px;
+            padding: 10px 0px 0px 0px;
+            gap: 10px;
+            border-radius: 100px;
+            border: 9px;
+        }
+    }
+
     .container {
         width: 1360px;
         margin: 0 auto;
         position: relative;
-    
+
         .title {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
-    
-            h3,
-            h4 {
+
+            h3 {
                 font-family: Poppins;
                 font-size: 28px;
                 font-weight: 600;
                 color: rgba(17, 17, 17, 1);
             }
+
+            h4 {
+                font-family: Poppins;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+            }
         }
-    
+
         .swiper-wrapper {
             display: flex;
             width: 1260px;
             margin: 0 auto;
-    
+
             .swiper-slide {
                 width: 25%;
-    
+
                 .img {
                     width: 295px;
                     height: 219.77px;
                     position: relative;
-    
+
                     img {
                         border-radius: 8px 8px 0px 0px;
                         width: 100%;
                         height: 100%;
                     }
-    
-                    svg {
+
+                    object {
                         position: absolute;
                         width: 44px;
                         height: 44px;
@@ -113,30 +190,29 @@ main {
                         padding: 10px 0px 0px 0px;
                     }
                 }
-    
+
                 .content {
                     width: 295px;
                     height: 140px;
                     padding: 0px 8px 8px 12px;
                     gap: 4px;
-    
+
                     h4 {
                         font-family: Poppins;
                         font-size: 24px;
                         font-weight: 600;
                         line-height: 36px;
                     }
-    
+
                     .properties {
                         display: flex;
                         gap: 5px;
-    
-                        svg {
-                            width: 24px;
-                            height: 24px;
+
+                        object {
+                            display: block;
                             padding: 3px 0px 0px 0px;
                         }
-    
+
                         p {
                             font-family: Poppins;
                             font-size: 16px;
@@ -148,36 +224,73 @@ main {
                 }
             }
         }
-    
+
         .swiper-button-prev,
         .swiper-button-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 1000; 
+            z-index: 1000;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
             padding: 10px;
             cursor: pointer;
             visibility: visible;
-            opacity: 1; 
-            border: 2px solid red; 
+            opacity: 1;
+            border: 2px solid red;
         }
-    
+
         .swiper-button-prev {
-            left: -100px; 
+            left: -100px;
         }
-    
+
         .swiper-button-next {
-            right: -100px; 
+            right: -100px;
         }
     }
-         
+
 }
 
 .upcoming {
     margin-top: 49px;
+    padding-bottom: 163px;
+    position: relative;
+
+    .next-button {
+        position: absolute;
+        top: 40%;
+        right: 0;
+
+        button {
+            width: 44px;
+            height: 44px;
+            top: 159px;
+            left: 1324px;
+            padding: 10px 0px 0px 0px;
+            gap: 10px;
+            border-radius: 100px;
+            border: 9px;
+        }
+    }
+
+    .prev-button {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        transform: scaleX(-1);
+
+        button {
+            width: 44px;
+            height: 44px;
+            top: 159px;
+            left: 1324px;
+            padding: 10px 0px 0px 0px;
+            gap: 10px;
+            border-radius: 100px;
+            border: 9px;
+        }
+    }
 
     .container {
         .title {
@@ -185,25 +298,32 @@ main {
             justify-content: space-between;
             margin-bottom: 20px;
 
-            h3,
-            h4 {
+            h3 {
                 font-family: Poppins;
                 font-size: 28px;
                 font-weight: 600;
                 color: rgba(17, 17, 17, 1);
             }
+
+            h4 {
+                font-family: Poppins;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+            }
         }
 
         .swiper-wrapper {
             display: flex;
+            height: 391px;
 
             .swiper-slide {
                 width: 25%;
 
                 .img {
+                    position: relative;
                     width: 295px;
                     height: 219.77px;
-                    position: relative;
 
                     img {
                         border-radius: 8px 8px 0px 0px;
@@ -211,7 +331,7 @@ main {
                         height: 100%;
                     }
 
-                    svg {
+                    .heart {
                         position: absolute;
                         width: 44px;
                         height: 44px;
@@ -268,8 +388,31 @@ main {
 
         .country {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
             gap: 12px;
             margin-top: 28px;
+
+            .circle {
+                overflow: hidden;
+
+                img {
+                    border-radius: 50%;
+                    height: 295px;
+                    width: 295px;
+                }
+
+                p {
+                    font-family: Poppins;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    text-align: center;
+                    margin-top: 12px;
+                }
+
+            }
+
         }
     }
 }
@@ -279,13 +422,16 @@ main {
 
     .container {
         display: flex;
-        justify-content: space-between;
-        background: rgba(253, 209, 213, 1);
+        align-items: center;
+        max-width: 1220px;
         border-radius: 20px;
         padding: 60px;
+        gap: 191px;
+        background: rgba(253, 209, 213, 1);
 
         .content {
             width: 606px;
+            height: 190px;
 
             h4 {
                 font-family: Poppins;
@@ -299,18 +445,22 @@ main {
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 24.38px;
+                color: rgba(17, 17, 17, 1);
             }
 
             button {
                 width: 140px;
                 height: 46px;
                 padding: 16px 32px 16px 32px;
-                gap: 3px;
                 border-radius: 8px;
-                background: rgba(248, 71, 87, 1);
                 border: none;
-                color: #fff;
                 margin-top: 24px;
+                background: rgba(248, 71, 87, 1);
+                font-family: Poppins;
+                font-size: 20px;
+                font-weight: 500;
+                color: #fff;
+                line-height: 13px;
             }
         }
     }
