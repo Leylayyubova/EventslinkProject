@@ -21,158 +21,6 @@ ul {
   list-style: none;
 }
 
-@media screen and (max-width: 768px) {
-  .eventslink {
-    display: flex;
-  }
-  .eventslink .container .topbar {
-    margin: 0 auto;
-    align-items: center !important;
-  }
-  .eventslink .container .right {
-    display: none !important;
-  }
-  .enjoy {
-    height: 350px;
-  }
-  .enjoy .container {
-    top: 35% !important;
-  }
-  .enjoy .container h4 {
-    font-size: 22px !important;
-    line-height: 30px !important;
-  }
-  .enjoy .container p {
-    font-size: 10px;
-  }
-  .activity .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 60px;
-  }
-  .activity .container .info {
-    margin-top: 10px;
-  }
-  .activity .container .info .circle {
-    width: 150px;
-    height: 150px;
-  }
-  .activity .container .info p {
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 12px;
-  }
-  .events .container .container .title {
-    flex-direction: column;
-    align-items: center;
-  }
-  .events .container .container .swiper-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .events .container .container .swiper-wrapper .swiper-slide {
-    width: 50% !important;
-  }
-  .upcoming .container .swiper-wrapper .swiper-slide {
-    width: 50% !important;
-  }
-  .destinations .container h2 {
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-  }
-  .destinations .container .country {
-    flex-direction: column;
-    align-items: center;
-  }
-  .destinations .container .country .circle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-  .destinations .container .country .circle img {
-    width: 100%;
-    height: auto;
-  }
-  .destinations .container .country .circle p {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  .join {
-    margin-top: 100px !important;
-  }
-  .join .container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 60px !important;
-  }
-  .join .container .content {
-    width: 100%;
-    text-align: center;
-  }
-  .join .container .content h4 {
-    font-size: 20px;
-    line-height: 36px;
-  }
-  .join .container .content p {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .join .container .content button {
-    width: 100px;
-    height: 36px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  footer {
-    margin-top: 80px !important;
-  }
-  footer .container {
-    padding-top: 10px;
-    margin: 0 25px;
-  }
-  footer .container .menu {
-    gap: 10px;
-  }
-  footer .container .contact {
-    margin-top: 30px;
-    display: block;
-  }
-  footer .container .contact p {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  footer .container .contact .mail {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  footer .container .contact .mail object {
-    width: 18px;
-    height: 18px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .events .container .title {
-    flex-direction: column;
-    align-items: center;
-  }
-  .events .container .swiper-wrapper {
-    align-items: center;
-  }
-  .events .container .swiper-wrapper .swiper-slide {
-    width: 100% !important;
-  }
-  .upcoming .container .title {
-    flex-direction: column;
-    align-items: center;
-  }
-  .upcoming .container .swiper-wrapper .swiper-slide {
-    width: 100% !important;
-  }
-}
 .eventslink {
   background: rgb(17, 17, 17);
 }
@@ -441,7 +289,7 @@ footer .container .contact .mail object {
   background: transparent;
 }
 .events .container {
-  width: 1360px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -563,6 +411,11 @@ footer .container .contact .mail object {
   border: 1px solid black;
   background: transparent;
 }
+.upcoming .container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 .upcoming .container .title {
   display: flex;
   justify-content: space-between;
@@ -582,15 +435,19 @@ footer .container .contact .mail object {
 }
 .upcoming .container .swiper-wrapper {
   display: flex;
-  height: 391px;
+  align-items: center;
+  max-width: 1260px;
+  margin: 0 auto;
 }
 .upcoming .container .swiper-wrapper .swiper-slide {
   width: 25%;
+  max-width: 620px;
+  margin-bottom: 20px;
 }
 .upcoming .container .swiper-wrapper .swiper-slide .img {
-  position: relative;
   width: 295px;
   height: 219.77px;
+  position: relative;
 }
 .upcoming .container .swiper-wrapper .swiper-slide .img img {
   border-radius: 8px 8px 0px 0px;
@@ -599,7 +456,7 @@ footer .container .contact .mail object {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.upcoming .container .swiper-wrapper .swiper-slide .img .heart {
+.upcoming .container .swiper-wrapper .swiper-slide .img object {
   position: absolute;
   width: 44px;
   height: 44px;
@@ -622,9 +479,8 @@ footer .container .contact .mail object {
   display: flex;
   gap: 5px;
 }
-.upcoming .container .swiper-wrapper .swiper-slide .content .properties svg {
-  width: 24px;
-  height: 24px;
+.upcoming .container .swiper-wrapper .swiper-slide .content .properties object {
+  display: block;
   padding: 3px 0px 0px 0px;
 }
 .upcoming .container .swiper-wrapper .swiper-slide .content .properties p {
@@ -633,6 +489,13 @@ footer .container .contact .mail object {
   font-weight: 400;
   line-height: 24px;
   color: rgb(105, 105, 105);
+}
+.upcoming .container .swiper-wrapper .swiper-slide:hover {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.upcoming .container .swiper-wrapper .swiper-slide:hover h4 {
+  text-decoration: underline;
 }
 
 .destinations .container h2 {
@@ -695,16 +558,38 @@ footer .container .contact .mail object {
   color: rgb(17, 17, 17);
 }
 .join .container .content button {
-  width: 140px;
-  height: 46px;
-  padding: 16px 32px 16px 32px;
-  border-radius: 8px;
-  border: none;
-  margin-top: 24px;
-  background: rgb(248, 71, 87);
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  color: #fff;
-  line-height: 13px;
+  line-height: 20px;
+  background: rgb(248, 71, 87);
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 1.2s, background 1.2s;
+}
+.join .container .content button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0px;
+  height: 100px;
+  background: rgb(187, 7, 22);
+  transition: transform 1.2s ease, width 1.2s ease, height 1.2s ease;
+  border-radius: 50% 50% 0 0;
+  transform: translate(-50%, 100%) scale(0);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+.join .container .content button:hover::before {
+  transform: translate(-50%, 10%) scale(1);
+  width: 200px;
 }/*# sourceMappingURL=style.css.map */
