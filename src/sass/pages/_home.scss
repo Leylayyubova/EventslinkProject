@@ -183,7 +183,11 @@
         }
     }
 
-   .container {
+    .container {
+        width: 1360px;
+        margin: 0 auto;
+        position: relative;
+
         .title {
             display: flex;
             justify-content: space-between;
@@ -206,24 +210,28 @@
 
         .swiper-wrapper {
             display: flex;
-            height: 391px;
+            align-items: center;
+            max-width: 1260px;
+            margin: 0 auto;
 
             .swiper-slide {
                 width: 25%;
+                max-width: 620px;
+                margin-bottom: 20px;
 
                 .img {
+                    width: 295px;
+                    height: 219.77px;
                     position: relative;
-                    max-width: 295px;
-                    max-height: 219.77px;
 
                     img {
                         border-radius: 8px 8px 0px 0px;
                         width: 100%;
                         height: 100%;
-                        object-fit: cover !important;
+                        object-fit: cover;
                     }
 
-                    .heart {
+                    object {
                         position: absolute;
                         width: 44px;
                         height: 44px;
@@ -249,9 +257,8 @@
                         display: flex;
                         gap: 5px;
 
-                        svg {
-                            width: 24px;
-                            height: 24px;
+                        object {
+                            display: block;
                             padding: 3px 0px 0px 0px;
                         }
 
@@ -264,8 +271,18 @@
                         }
                     }
                 }
+
+                &:hover {
+                    border-radius: 8px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
+
     }
 
 }
@@ -347,6 +364,7 @@
                         border-radius: 8px 8px 0px 0px;
                         width: 100%;
                         height: 100%;
+                        object-fit: cover;
                     }
 
                     .heart {

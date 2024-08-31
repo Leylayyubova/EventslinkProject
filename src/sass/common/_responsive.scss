@@ -69,10 +69,6 @@
 
                     .swiper-slide {
                         width: 50% !important;
-                        .img {
-                            // width: auto;
-                            max-height: auto;
-                        }
                     }
                 }
             }
@@ -86,9 +82,6 @@
             .swiper-wrapper {
                 .swiper-slide {
                     width: 50% !important; 
-                    .img{
-                        max-height: auto;
-                    }
                 }
             }
         }
