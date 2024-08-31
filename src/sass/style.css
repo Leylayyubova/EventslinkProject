@@ -21,6 +21,164 @@ ul {
   list-style: none;
 }
 
+@media screen and (max-width: 768px) {
+  .eventslink {
+    display: flex;
+  }
+  .eventslink .container .topbar {
+    margin: 0 auto;
+    align-items: center !important;
+  }
+  .eventslink .container .right {
+    display: none !important;
+  }
+  .enjoy {
+    height: 350px;
+  }
+  .enjoy .container {
+    top: 35% !important;
+  }
+  .enjoy .container h4 {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+  .enjoy .container p {
+    font-size: 10px;
+  }
+  .activity .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  .activity .container .info {
+    margin-top: 10px;
+  }
+  .activity .container .info .circle {
+    width: 150px;
+    height: 150px;
+  }
+  .activity .container .info p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 12px;
+  }
+  .events .container .container .title {
+    flex-direction: column;
+    align-items: center;
+  }
+  .events .container .container .swiper-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .events .container .container .swiper-wrapper .swiper-slide {
+    width: 50% !important;
+  }
+  .events .container .container .swiper-wrapper .swiper-slide .img {
+    max-height: auto;
+  }
+  .upcoming .container .swiper-wrapper .swiper-slide {
+    width: 50% !important;
+  }
+  .upcoming .container .swiper-wrapper .swiper-slide .img {
+    max-height: auto;
+  }
+  .destinations .container h2 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .destinations .container .country {
+    flex-direction: column;
+    align-items: center;
+  }
+  .destinations .container .country .circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .destinations .container .country .circle img {
+    width: 100%;
+    height: auto;
+  }
+  .destinations .container .country .circle p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .join {
+    margin-top: 100px !important;
+  }
+  .join .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 60px !important;
+  }
+  .join .container .content {
+    width: 100%;
+    text-align: center;
+  }
+  .join .container .content h4 {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .join .container .content p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .join .container .content button {
+    width: 100px;
+    height: 36px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  footer {
+    margin-top: 80px !important;
+  }
+  footer .container {
+    padding-top: 10px;
+    margin: 0 25px;
+  }
+  footer .container .menu {
+    gap: 10px;
+  }
+  footer .container .contact {
+    margin-top: 30px;
+    display: block;
+  }
+  footer .container .contact p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  footer .container .contact .mail {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  footer .container .contact .mail object {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .events .container .title {
+    flex-direction: column;
+    align-items: center;
+  }
+  .events .container .swiper-wrapper {
+    align-items: center;
+  }
+  .events .container .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+  }
+  .upcoming .container .title {
+    flex-direction: column;
+    align-items: center;
+  }
+  .upcoming .container .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+  }
+}
 .eventslink {
   background: rgb(17, 17, 17);
 }
@@ -130,12 +288,21 @@ footer .container .contact .mail object {
   margin-right: 8px;
 }
 
+@keyframes hideText {
+  0% {
+    background-color: rgb(149, 11, 23);
+  }
+  50% {
+    background-color: transparent;
+  }
+}
 .enjoy {
   top: 80px;
 }
 .enjoy .background {
   background-image: url(https://s3-alpha-sig.figma.com/img/308e/e9a6/909ef2b0c724492151e712d65e7e6d94?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MACHveKPUvD-UfKTrHuT92cywleE5M46CNYaK4acmQ84i27EJx2rbyxYyKKdZKeGKeeMB9MJFkDrUl-rjfcERBuWNCQptWy-0XkkV0kmFeqpNg5M-cEtlPST6Ei26zG4TqRCvvWcolzVPtPa6PRAdNoyooo7td-FQMVKSCPUzMenWNp~5FC7QDBvh2f6HyE4BMUjT0EcFTeoZbaco5YvgXb1xtvmcdR~MJ~qgupFCPcmeWzLVpbTjE8ziYyyCZNRsZFgsvLSRhFpRy~Puk-DzVM6Rr0q56PxrJZGECFDpCyli6dZQyOMc-gqBztPueSQSTM7ek3X9mjYUNZY207B8Q__);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 0px -345px;
   filter: grayscale(100%);
   width: 100%;
@@ -143,9 +310,9 @@ footer .container .contact .mail object {
 }
 .enjoy .container {
   position: absolute;
-  width: 727px;
+  width: 55%;
   height: 200px !important;
-  top: 65%;
+  top: 60%;
   left: 100px;
   z-index: 1;
 }
@@ -172,10 +339,33 @@ footer .container .contact .mail object {
   background: rgb(248, 71, 87);
   color: rgb(255, 255, 255);
   margin-top: 40px;
-  padding: 16px 32px 16px 32px;
+  padding: 16px 32px;
   border-radius: 8px;
   border: none;
   box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 1.2s, background 1.2s;
+}
+.enjoy .container button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0px;
+  height: 100px;
+  background: rgb(187, 7, 22);
+  transition: transform 1.2s ease, width 1.2s ease, height 1.2s ease;
+  border-radius: 50% 50% 0 0;
+  transform: translate(-50%, 100%) scale(0);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+.enjoy .container button:hover::before {
+  transform: translate(-50%, 10%) scale(1);
+  width: 200px;
 }
 
 .activity .container {
@@ -218,45 +408,43 @@ footer .container .contact .mail object {
   align-items: center;
   justify-content: center;
 }
+.activity .container .info:hover p {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}
 
 .events {
   position: relative;
 }
-.events .next-button {
+.events .next-button-1 {
   position: absolute;
-  top: 40%;
-  right: 0;
-}
-.events .next-button button {
-  width: 44px;
-  height: 44px;
-  top: 159px;
-  left: 1324px;
-  padding: 10px 0px 0px 0px;
-  gap: 10px;
-  border-radius: 100px;
-  border: 9px;
-}
-.events .prev-button {
-  position: absolute;
-  left: 0;
-  top: 40%;
+  top: 50%;
+  left: 20px;
   transform: scaleX(-1);
 }
-.events .prev-button button {
+.events .next-button-1 button {
   width: 44px;
   height: 44px;
-  top: 159px;
-  left: 1324px;
-  padding: 10px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
   gap: 10px;
   border-radius: 100px;
   border: 9px;
+  background: transparent;
+  border: 1px solid black;
 }
-.events .container {
-  width: 1360px;
-  margin: 0 auto;
-  position: relative;
+.events .prev-button-1 {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.events .prev-button-1 button {
+  width: 44px;
+  height: 44px;
+  padding: 5px 0px 0px 0px;
+  border-radius: 100px;
+  border: 9px;
+  border: 1px solid black;
+  background: transparent;
 }
 .events .container .title {
   display: flex;
@@ -277,23 +465,24 @@ footer .container .contact .mail object {
 }
 .events .container .swiper-wrapper {
   display: flex;
-  width: 1260px;
-  margin: 0 auto;
+  height: 391px;
 }
 .events .container .swiper-wrapper .swiper-slide {
   width: 25%;
 }
 .events .container .swiper-wrapper .swiper-slide .img {
-  width: 295px;
-  height: 219.77px;
   position: relative;
+  max-width: 295px;
+  max-height: 219.77px;
 }
 .events .container .swiper-wrapper .swiper-slide .img img {
   border-radius: 8px 8px 0px 0px;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
-.events .container .swiper-wrapper .swiper-slide .img object {
+.events .container .swiper-wrapper .swiper-slide .img .heart {
   position: absolute;
   width: 44px;
   height: 44px;
@@ -316,8 +505,9 @@ footer .container .contact .mail object {
   display: flex;
   gap: 5px;
 }
-.events .container .swiper-wrapper .swiper-slide .content .properties object {
-  display: block;
+.events .container .swiper-wrapper .swiper-slide .content .properties svg {
+  width: 24px;
+  height: 24px;
   padding: 3px 0px 0px 0px;
 }
 .events .container .swiper-wrapper .swiper-slide .content .properties p {
@@ -327,63 +517,42 @@ footer .container .contact .mail object {
   line-height: 24px;
   color: rgb(105, 105, 105);
 }
-.events .container .swiper-button-prev,
-.events .container .swiper-button-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  visibility: visible;
-  opacity: 1;
-  border: 2px solid red;
-}
-.events .container .swiper-button-prev {
-  left: -100px;
-}
-.events .container .swiper-button-next {
-  right: -100px;
-}
 
 .upcoming {
   margin-top: 49px;
   padding-bottom: 163px;
   position: relative;
 }
-.upcoming .next-button {
+.upcoming .next-button-2 {
   position: absolute;
-  top: 40%;
-  right: 0;
-}
-.upcoming .next-button button {
-  width: 44px;
-  height: 44px;
-  top: 159px;
-  left: 1324px;
-  padding: 10px 0px 0px 0px;
-  gap: 10px;
-  border-radius: 100px;
-  border: 9px;
-}
-.upcoming .prev-button {
-  position: absolute;
-  left: 0;
-  top: 40%;
+  top: 36%;
+  left: 20px;
   transform: scaleX(-1);
 }
-.upcoming .prev-button button {
+.upcoming .next-button-2 button {
   width: 44px;
   height: 44px;
-  top: 159px;
-  left: 1324px;
-  padding: 10px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
   gap: 10px;
   border-radius: 100px;
   border: 9px;
+  border: 1px solid black;
+  background: transparent;
+}
+.upcoming .prev-button-2 {
+  position: absolute;
+  right: 20px;
+  top: 36%;
+}
+.upcoming .prev-button-2 button {
+  width: 44px;
+  height: 44px;
+  padding: 5px 0px 0px 0px;
+  gap: 10px;
+  border-radius: 100px;
+  border: 9px;
+  border: 1px solid black;
+  background: transparent;
 }
 .upcoming .container .title {
   display: flex;

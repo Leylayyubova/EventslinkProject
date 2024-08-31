@@ -1,8 +1,20 @@
+@keyframes hideText {
+    0% {
+        background-color: rgb(149 11 23);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
+
 .enjoy {
     top: 80px;
+
     .background {
         background-image: url(https://s3-alpha-sig.figma.com/img/308e/e9a6/909ef2b0c724492151e712d65e7e6d94?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MACHveKPUvD-UfKTrHuT92cywleE5M46CNYaK4acmQ84i27EJx2rbyxYyKKdZKeGKeeMB9MJFkDrUl-rjfcERBuWNCQptWy-0XkkV0kmFeqpNg5M-cEtlPST6Ei26zG4TqRCvvWcolzVPtPa6PRAdNoyooo7td-FQMVKSCPUzMenWNp~5FC7QDBvh2f6HyE4BMUjT0EcFTeoZbaco5YvgXb1xtvmcdR~MJ~qgupFCPcmeWzLVpbTjE8ziYyyCZNRsZFgsvLSRhFpRy~Puk-DzVM6Rr0q56PxrJZGECFDpCyli6dZQyOMc-gqBztPueSQSTM7ek3X9mjYUNZY207B8Q__);
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: 0px -345px;
         filter: grayscale(100%);
         width: 100%;
@@ -11,9 +23,9 @@
 
     .container {
         position: absolute;
-        width: 727px;
+        width: 55%;
         height: 200px !important;
-        top: 65%;
+        top: 60%;
         left: 100px;
         z-index: 1;
 
@@ -42,11 +54,38 @@
             background: rgba(248, 71, 87, 1);
             color: rgba(255, 255, 255, 1);
             margin-top: 40px;
-            padding: 16px 32px 16px 32px;
+            padding: 16px 32px;
             border-radius: 8px;
             border: none;
             box-shadow: 0px 1px 4px 0px rgba(25, 33, 61, 0.08);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+            transition: color 1.2s, background 1.2s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0px;
+                height: 100px;
+                background: rgba(187, 7, 22, 1);
+                transition: transform 1.2s ease, width 1.2s ease, height 1.2s ease;
+                border-radius: 50% 50% 0 0;
+                transform: translate(-50%, 100%) scale(0);
+                transform-origin: bottom center;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                transform: translate(-50%, 10%) scale(1);
+                width: 200px;
+            }
         }
+
+
     }
 }
 
@@ -96,6 +135,11 @@
                 align-items: center;
                 justify-content: center;
             }
+
+            &:hover p {
+                text-decoration: underline;
+                text-decoration-thickness: 1.5px;
+            }
         }
     }
 }
@@ -103,46 +147,43 @@
 .events {
     position: relative;
 
-    .next-button {
+    .next-button-1 {
         position: absolute;
-        top: 40%;
-        right: 0;
-
-        button {
-            width: 44px;
-            height: 44px;
-            top: 159px;
-            left: 1324px;
-            padding: 10px 0px 0px 0px;
-            gap: 10px;
-            border-radius: 100px;
-            border: 9px;
-        }
-    }
-
-    .prev-button {
-        position: absolute;
-        left: 0;
-        top: 40%;
+        top: 50%;
+        left: 20px;
         transform: scaleX(-1);
 
         button {
             width: 44px;
             height: 44px;
-            top: 159px;
-            left: 1324px;
-            padding: 10px 0px 0px 0px;
+            padding: 5px 0px 0px 0px;
             gap: 10px;
             border-radius: 100px;
             border: 9px;
+            background: transparent;
+            border: 1px solid black;
+
         }
     }
 
-    .container {
-        width: 1360px;
-        margin: 0 auto;
-        position: relative;
+    .prev-button-1 {
+        position: absolute;
+        right: 20px;
+        top: 50%;
 
+        button {
+            width: 44px;
+            height: 44px;
+            padding: 5px 0px 0px 0px;
+            border-radius: 100px;
+            border: 9px;
+            border: 1px solid black;
+            background: transparent;
+
+        }
+    }
+
+   .container {
         .title {
             display: flex;
             justify-content: space-between;
@@ -165,24 +206,24 @@
 
         .swiper-wrapper {
             display: flex;
-            width: 1260px;
-            margin: 0 auto;
+            height: 391px;
 
             .swiper-slide {
                 width: 25%;
 
                 .img {
-                    width: 295px;
-                    height: 219.77px;
                     position: relative;
+                    max-width: 295px;
+                    max-height: 219.77px;
 
                     img {
                         border-radius: 8px 8px 0px 0px;
                         width: 100%;
                         height: 100%;
+                        object-fit: cover !important;
                     }
 
-                    object {
+                    .heart {
                         position: absolute;
                         width: 44px;
                         height: 44px;
@@ -208,8 +249,9 @@
                         display: flex;
                         gap: 5px;
 
-                        object {
-                            display: block;
+                        svg {
+                            width: 24px;
+                            height: 24px;
                             padding: 3px 0px 0px 0px;
                         }
 
@@ -224,30 +266,6 @@
                 }
             }
         }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            visibility: visible;
-            opacity: 1;
-            border: 2px solid red;
-        }
-
-        .swiper-button-prev {
-            left: -100px;
-        }
-
-        .swiper-button-next {
-            right: -100px;
-        }
     }
 
 }
@@ -257,38 +275,38 @@
     padding-bottom: 163px;
     position: relative;
 
-    .next-button {
+    .next-button-2 {
         position: absolute;
-        top: 40%;
-        right: 0;
-
-        button {
-            width: 44px;
-            height: 44px;
-            top: 159px;
-            left: 1324px;
-            padding: 10px 0px 0px 0px;
-            gap: 10px;
-            border-radius: 100px;
-            border: 9px;
-        }
-    }
-
-    .prev-button {
-        position: absolute;
-        left: 0;
-        top: 40%;
+        top: 36%;
+        left: 20px;
         transform: scaleX(-1);
 
         button {
             width: 44px;
             height: 44px;
-            top: 159px;
-            left: 1324px;
-            padding: 10px 0px 0px 0px;
+            padding: 5px 0px 0px 0px;
             gap: 10px;
             border-radius: 100px;
             border: 9px;
+            border: 1px solid black;
+            background: transparent;
+        }
+    }
+
+    .prev-button-2 {
+        position: absolute;
+        right: 20px;
+        top: 36%;
+
+        button {
+            width: 44px;
+            height: 44px;
+            padding: 5px 0px 0px 0px;
+            gap: 10px;
+            border-radius: 100px;
+            border: 9px;
+            border: 1px solid black;
+            background: transparent;
         }
     }
 
